@@ -1,0 +1,54 @@
+.main{
+  display: flex;
+  align-items: center;
+
+}
+.bar{
+height: relative;
+}
+.button{
+    display: flex;
+  align-items: center;
+  float: left;
+  border-radius: 2px;
+  border-color: rgb(147, 64, 64);
+  justify-content: center;
+}
+.centerflex{
+  position: sticky;
+  display: flex;
+  align-items: center;
+  justify-content: inline;
+  height: 400px;
+  width: 300px;
+  border: 3px saddlebrown;
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+  align-self: flex-start; /* <-- this is the fix */
+
+}
+.flex{
+  display: inline;
+  height: 500px;
+  width: 450px;
+  border: 4px burlywood;
+  float:right;
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 0;
+  align-self: flex-start; /* <-- this is the fix */
+
+}
+.center{
+  display: inline;
+  height: 500px;
+  width: 700px;
+  border: 4px burlywood;
+  float:right;
+  position: -webkit-sticky; /* for Safari */
+  position: sticky;
+  top: 100px;
+  align-self: flex-start; /* <-- this is the fix */
+
+}

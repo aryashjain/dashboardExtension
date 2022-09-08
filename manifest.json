@@ -1,0 +1,28 @@
+{
+    "name": "charts popBoard",
+    "author": "aryash jain",
+    "description": "plot the chart!",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons":{
+        "16":"logo.jpg",
+        "18":"logo.jpg"
+    },
+    "permissions": [
+        "activeTab"
+      ],
+    "host_permissions": ["http://127.0.0.1:5500/charts.html#"],
+    "action": {
+        
+        "default_title": "charts",   
+        "default_popup": "charts.html"  
+      },
+
+    
+
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["js/button.js","js/chart.js","js/pie.js","js/html2canvas.js","js/chrt.min.js","js/boots.js"]
+        
+        }]
+  }
