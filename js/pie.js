@@ -84,10 +84,11 @@ function alerting()
 {
 
   if(numblue>numred&&numblue>numorange)
-  alert('Great keep going');
+  document.getElementById("note").innerHTML += 'Great keep going';
 
   if(numred>numblue&&numred>numorange)
-  alert('Not good repeat your point');
+  document.getElementById("note").innerHTML +=  'Not good repeat your point';
   if(numorange>numred&&numorange>numblue)
-  alert('some students are not listening to you , but overall class is fine');
+  document.getElementById("note").innerHTML += 'some students are not listening to you , but overall class is fine';
+  ;
 }

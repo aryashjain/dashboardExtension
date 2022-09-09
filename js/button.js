@@ -21,7 +21,7 @@ downloader();
 }
 
 function  thisfunc(){
-
+  window.location.reload();
 setTimeout(thatfunc,9000);
 
 
