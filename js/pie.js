@@ -1,6 +1,12 @@
 const xlabels2=[];
 const ylabels2=[];
 const pieLabels=[];
+const colorpie=[];
+
+let numblue=0;
+let numred=0;
+let numorange=0;
+
 var sum=0;
 chartIt();
 async function getData(){
@@ -15,6 +21,19 @@ async function getData(){
     const temp = col[1];
     ylabels2.push(temp);
    // console.log(year,temp);
+   if(temp>70)
+   {
+    colorpie.push('blue');
+  numblue++; 
+  }
+    else if(temp>40)
+   {colorpie.push('orange');
+  numorange++;
+  }
+   else
+   {colorpie.push('red');
+   numred++;
+  }
 
   })
 
@@ -35,7 +54,7 @@ async function getData(){
   
 async function chartIt(){
   await getData();
-
+alerting();
 const ctx2= document.getElementById('myPie').getContext("2d");
 const myPie= new Chart(ctx2,{
 //type
@@ -47,8 +66,8 @@ data:{
         data:pieLabels
     ,
     label:"dataset",
-    backgroundColor:["orange","aliceblue",'green']
-, bordercolor:[..."black"]
+    backgroundColor:colorpie
+    , bordercolor:[..."black"]
 ,borderWidth:3,    
 }  ,
   
@@ -60,4 +79,15 @@ options:{
 
 
 })
+}
+function alerting()
+{
+
+  if(numblue>numred&&numblue>numorange)
+  alert('Great keep going');
+
+  if(numred>numblue&&numred>numorange)
+  alert('Not good repeat your point');
+  if(numorange>numred&&numorange>numblue)
+  alert('some students are not listening to you , but overall class is fine');
 }

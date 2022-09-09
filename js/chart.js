@@ -1,6 +1,6 @@
 const xlabels=[];
 const ylabels=[];
-
+const color=[];
 var sum=0;
 chartIt();
 
@@ -15,6 +15,12 @@ async function getData(){
       xlabels.push(year);
       const temp = col[1];
       ylabels.push(temp);
+      if(temp>70)
+      color.push('blue');
+      else if(temp>40)
+      color.push('orange');
+      else
+      color.push('red');
      // console.log(year,temp);
   
     })
@@ -34,7 +40,7 @@ data:{
         data:ylabels
         ,
     label:"dataset",
-    backgroundColor:["orange","aliceblue",'green']
+    backgroundColor:color
 , bordercolor:[..."black"]
 ,borderWidth:3,    
 }    
